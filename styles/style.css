@@ -2,4 +2,223 @@
 
 .page {
   /* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять селекторы для разных цветовых тем. */
+  background-image: var(--background-image);
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  background-color: var(--bg-color);
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.header {
+  position: relative;
+  height: 100vh;
+  min-height: 668px;
+  padding: var(--padding-small);
+  display: grid;
+  grid-template-rows: 1fr min-content 1fr;
+}
+
+.header::after {
+  content: "";
+  position: absolute;
+  inset-inline-end: 10px;
+  inset-block-start: 10px;
+  width: 25px;
+  height: 25px;
+  border-top: 1px solid var(--accent-color);
+  border-right: 1px solid var(--accent-color);
+}
+
+.header::before {
+  content: "";
+  position: absolute;
+  inset-inline-start: 10px;
+  inset-block-end: 10px;
+  width: 25px;
+  height: 25px;
+  border-bottom: 1px solid var(--accent-color);
+  border-left: 1px solid var(--accent-color);
+}
+
+.header__theme-menu {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+
+.header__theme-menu-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-small);
+}
+
+.header__theme-menu-button {
+  color: var(--accent-color);
+  background-color: transparent;
+  border: none;
+  text-transform: lowercase;
+  inline-size: 70px;
+  block-size: 26px;
+  line-height: 1em;
+  cursor: pointer;
+}
+
+.header__theme-menu-button_type_dark {
+  outline: 1px solid var(--accent-color);
+}
+
+.header__theme-menu-button:hover {
+  outline: 1px solid var(--transparent-text-color);
+}
+
+.header__theme-menu-button:focus-visible {
+  border-bottom: 1px solid var(--accent-color);
+  outline: none;
+}
+
+.header__theme-menu-button:focus {
+  outline: none;
+}
+
+.header__decorated-text {
+  position: absolute;
+  inset-inline-end: 38px;
+  inset-block-start: 10px;
+  line-height: 1.4em;
+  text-transform: uppercase;
+  color: var(--accent-color);
+}
+
+.header__decorated-text::after {
+  position: absolute;
+  inset-inline-end: -25px;
+  inset-block-start: 2px;
+  content: url(../images/Ellipse\ 4.png);
+}
+
+.header__heading {
+  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  font-weight: var(--font-weight-bold);
+  line-height: 83%;
+  color: var(--heading-color);
+  text-shadow: 4px 4px 0 var(--accent-color);
+}
+
+.header__title-decor {
+  align-self: center;
+}
+
+.title-decor {
+  background-color: var(--accent-color);
+  color: var(--title-text-color);
+  font-weight: var(--font-weight-bold);
+}
+
+.title-decor_light {
+  font-weight: 400;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  padding-inline: var(--padding-small);
+}
+
+.content__section {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-medium);
+}
+
+.section__title {
+  color: var(--accent-color);
+}
+
+.card {
+  color: var(--text-color);
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-small);
+}
+
+.link {
+  text-shadow: 2px 2px var(--accent-color);
+  text-decoration-line: none;
+  cursor: pointer;
+}
+
+/* Убрать ховер у мобилок */
+.link:hover {
+  border-bottom: 1px solid var(--text-color);
+}
+
+.link:focus {
+  outline: none;
+}
+
+.link:focus-visible {
+  outline: 1px solid var(--text-color);
+}
+
+.reasons {
+}
+
+.gallery {
+  gap: var(--gap-small);
+}
+
+.gallery__images {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  gap: var(--gap-small);
+}
+
+.gallery__image {
+  object-fit: cover;
+  inline-size: 100%;
+}
+
+.footer {
+  position: relative;
+  height: 100vh;
+  min-height: 668px;
+  padding: var(--padding-small);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer__heading {
+  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  font-weight: var(--font-weight-bold);
+  line-height: 83%;
+  color: var(--heading-color);
+  text-shadow: 2px 2px 0 var(--accent-color);
+}
+
+.footer::after {
+  content: "";
+  position: absolute;
+  inset-inline-end: 10px;
+  inset-block-start: 10px;
+  width: 25px;
+  height: 25px;
+  border-top: 1px solid var(--accent-color);
+  border-right: 1px solid var(--accent-color);
+}
+
+.footer::before {
+  content: "";
+  position: absolute;
+  inset-inline-start: 10px;
+  inset-block-end: 10px;
+  width: 25px;
+  height: 25px;
+  border-bottom: 1px solid var(--accent-color);
+  border-left: 1px solid var(--accent-color);
 }
