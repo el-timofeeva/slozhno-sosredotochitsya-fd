@@ -14,7 +14,7 @@
   --bg-color: #000028;
   --decorated-text: var(--accent-color);
 
-  --main-font: "IBM Plex mono";
+  --main-font: "IBM Plex mono", "Monospace", sans-serif;
   --font-weight-bold: 700;
   --font-weight-regular: 400;
 
